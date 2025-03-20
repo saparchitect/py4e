@@ -17,10 +17,9 @@ for line in fh:
     FQemail = pieces[1].split('@')
     email = FQemail[0]
     organization = FQemail[1]
-    print(pieces)
-    print(FQemail)
-    print(organization)
-    email = pieces[1]
+    #print(pieces)
+    #print(FQemail)
+    #print(organization)
     cur.execute('SELECT count FROM Counts WHERE org = ? ', (organization,))
     row = cur.fetchone()
     if row is None:
